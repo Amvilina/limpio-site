@@ -1,0 +1,15 @@
+@layer layout {
+  .page {
+    display: grid;
+    min-height: 100dvh;
+    place-items: center;
+    padding: var(--space-6) var(--space-3);
+    background:
+      radial-gradient(
+        42rem 28rem at 72% 18%,
+        var(--color-wash),
+        transparent 68%
+      ),
+      var(--color-bg);
+  }
+}
