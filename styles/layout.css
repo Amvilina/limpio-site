@@ -32,6 +32,19 @@
     padding-block: 0.65rem;
   }
 
+  @media (max-width: 30rem) {
+    .site-header__bar {
+      flex-wrap: wrap;
+    }
+
+    .nav {
+      order: 3;
+      width: 100%;
+      justify-content: space-between;
+      padding-bottom: 0.35rem;
+    }
+  }
+
   .site-footer {
     display: flex;
     flex-wrap: wrap;

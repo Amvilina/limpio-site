@@ -4,6 +4,7 @@
     background: var(--color-bg);
     color: var(--color-fg);
     scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
   }
 
   @media (prefers-reduced-motion: reduce) {

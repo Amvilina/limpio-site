@@ -11,6 +11,14 @@
     color: inherit;
   }
 
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.25rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
   .site-header a:hover {
     opacity: 0.75;
   }
