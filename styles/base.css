@@ -21,18 +21,23 @@
   }
 
   h1,
+  h2,
   .brand {
     font-family: var(--font-display);
-    font-optical-sizing: auto;
     font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.02;
+    letter-spacing: 0.04em;
+    line-height: 1.05;
+    text-transform: uppercase;
   }
 
   h1 {
     font-size: var(--step-3);
-    font-weight: 600;
-    font-style: normal;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: var(--step-2);
+    font-weight: 700;
   }
 
   a {

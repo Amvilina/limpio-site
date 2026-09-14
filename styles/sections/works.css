@@ -1,29 +1,25 @@
 @layer components {
   .works {
     width: 100%;
-    padding-block: 5.5rem;
-    background: oklch(0.91 0.016 140);
+    padding-block: 3.5rem;
+    background: oklch(0.93 0.02 210);
   }
 
   .works h2,
   .works__grid {
-    width: var(--container);
+    width: min(100% - 2rem, 46rem);
     margin-inline: auto;
   }
 
   .works h2 {
-    font-family: var(--font-display);
     font-size: var(--step-2);
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: -0.03em;
   }
 
   .works__grid {
     display: grid;
-    gap: var(--space-5);
-    margin-top: var(--space-5);
-    padding-top: 0.7rem;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+    padding-top: 0.5rem;
   }
 
   @media (min-width: 48rem) {
@@ -35,10 +31,10 @@
   .compare {
     position: relative;
     margin: 0;
-    padding: 0.7rem 0.7rem 1.7rem;
+    padding: 0.5rem 0.5rem 1.2rem;
     background: var(--color-foam);
-    border: 1px solid oklch(0.84 0.02 140);
-    box-shadow: 0 1.6rem 3rem oklch(0.22 0.03 165 / 0.18);
+    border: 1px solid var(--color-line);
+    box-shadow: 0 1.6rem 3rem oklch(0.32 0.05 209 / 0.16);
   }
 
   .compare:nth-child(1) {
@@ -68,13 +64,13 @@
     border-radius: 50%;
     background: radial-gradient(
       circle at 32% 28%,
-      oklch(0.72 0.2 25),
-      oklch(0.46 0.19 28) 62%,
-      oklch(0.38 0.16 28)
+      oklch(0.78 0.16 42),
+      var(--color-pin) 62%,
+      oklch(0.52 0.16 42)
     );
     box-shadow:
-      inset 0 -0.12rem 0.18rem oklch(0.28 0.12 25 / 0.4),
-      0 0.18rem 0.3rem oklch(0.2 0.05 25 / 0.35);
+      inset 0 -0.12rem 0.18rem oklch(0.4 0.12 42 / 0.4),
+      0 0.18rem 0.3rem oklch(0.3 0.08 42 / 0.35);
     translate: -50% 0;
   }
 
@@ -95,7 +91,7 @@
     overflow: hidden;
     aspect-ratio: 1;
     background: var(--color-line);
-    box-shadow: inset 0 0 0 1px oklch(0.26 0.032 165 / 0.18);
+    box-shadow: inset 0 0 0 1px oklch(0.39 0.07 209 / 0.18);
     container-type: inline-size;
     touch-action: none;
     user-select: none;
@@ -142,7 +138,7 @@
     top: 0.75rem;
     color: var(--color-foam);
     font-size: var(--step--1);
-    text-shadow: 0 1px 8px oklch(0.15 0.03 165 / 0.75);
+    text-shadow: 0 1px 8px oklch(0.2 0.05 209 / 0.75);
     pointer-events: none;
   }
 
@@ -174,7 +170,7 @@
     height: 2.25rem;
     border: 1px solid var(--color-foam);
     border-radius: 50%;
-    background: oklch(0.26 0.032 165 / 0.7);
+    background: oklch(0.39 0.07 209 / 0.72);
     translate: -50% -50%;
   }
 
@@ -221,12 +217,12 @@
   }
 
   .compare figcaption {
-    margin-top: 0.85rem;
+    margin-top: 0.55rem;
     padding-inline: 0.2rem;
     font-family: var(--font-display);
-    font-size: var(--step-1);
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-size: var(--step-0);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 }

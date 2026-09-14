@@ -1,20 +1,22 @@
 @layer tokens {
   :root {
-    --color-bg: oklch(0.96 0.012 130);
-    --color-fg: oklch(0.23 0.03 155);
-    --color-muted: oklch(0.45 0.02 150);
-    --color-accent: oklch(0.4 0.07 160);
-    --color-line: oklch(0.86 0.02 140);
-    --color-pine: oklch(0.26 0.032 165);
-    --color-foam: oklch(0.96 0.012 130);
+    --color-bg: oklch(0.98 0.01 210);
+    --color-fg: oklch(0.32 0.04 210);
+    --color-muted: oklch(0.5 0.03 210);
+    --color-accent: oklch(0.39 0.07 209);
+    --color-line: oklch(0.88 0.02 210);
+    --color-brand: oklch(0.39 0.07 209);
+    --color-cyan: oklch(0.64 0.1 215);
+    --color-foam: oklch(0.99 0.005 210);
+    --color-pin: oklch(0.67 0.18 42);
 
-    --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
-    --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+    --font-display: "Oswald", "Arial Narrow", sans-serif;
+    --font-body: "Nunito", "Segoe UI", sans-serif;
 
     --step--1: 0.9375rem;
     --step-0: 1.0625rem;
     --step-1: 1.25rem;
-    --step-2: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+    --step-2: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
     --step-3: clamp(2.75rem, 1.7rem + 3.2vw, 4.25rem);
 
     --space-2: 0.5rem;
@@ -23,6 +25,7 @@
     --space-5: 2.5rem;
     --space-6: 4rem;
 
+    --radius-m: 1.25rem;
     --container: min(100% - 2rem, 68rem);
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --duration-fast: 180ms;

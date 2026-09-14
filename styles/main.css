@@ -8,4 +8,7 @@
 @import url("./components/button.css") layer(components);
 @import url("./sections/hero.css") layer(components);
 @import url("./sections/works.css") layer(components);
+@import url("./sections/price.css") layer(components);
+@import url("./sections/reviews.css") layer(components);
+@import url("./sections/contact.css") layer(components);
 @import url("./motion.css") layer(motion);

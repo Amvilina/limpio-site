@@ -87,3 +87,4 @@ document.querySelectorAll("[data-compare]").forEach((stage, index) => {
 
   io.observe(figure);
 });
+
