@@ -1,0 +1,40 @@
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    min-height: 3rem;
+    padding: 0.75rem 1.35rem;
+    overflow: hidden;
+    border: 1px solid var(--color-foam);
+    background: var(--color-foam);
+    color: var(--color-pine);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--color-pine);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .btn:hover,
+  .btn:focus-visible {
+    color: var(--color-foam);
+  }
+
+  .btn:hover::before,
+  .btn:focus-visible::before {
+    transform: scaleX(1);
+  }
+}

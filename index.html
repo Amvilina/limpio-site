@@ -1,25 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello World</title>
-    <meta name="description" content="Hello World" />
+    <title>Limpio — химчистка мебели</title>
+    <meta
+      name="description"
+      content="Химчистка диванов, кресел и матрасов на выезде."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Source+Sans+3:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hello">
-        <p class="hello__mark">Limpio</p>
-        <h1 class="hello__title" data-greeting>Hello World</h1>
+    <a class="skip" href="#main">К содержанию</a>
+
+    <header class="site-header">
+      <div class="site-header__bar">
+        <a class="brand" href="#top">Limpio</a>
+        <a class="header__phone" href="tel:+79000000000">+7 900 000-00-00</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <img
+          class="hero__media"
+          src="images/hero.webp"
+          alt=""
+          width="1800"
+          height="1200"
+          fetchpriority="high"
+        />
+        <div class="hero__copy">
+          <p class="brand">Limpio</p>
+          <h1>Химчистка мягкой мебели</h1>
+          <a class="btn" href="tel:+79000000000"><span>Записать выезд</span></a>
+        </div>
+      </section>
+
+      <section class="works" id="works">
+        <h2>Примеры работ</h2>
+        <div class="works__grid">
+          <figure class="compare">
+            <div class="compare__stage" data-compare>
+              <img class="compare__after" src="images/works/sofa-after.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              <div class="compare__before">
+                <img src="images/works/sofa-before.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              </div>
+              <span class="compare__tag compare__tag--before">До</span>
+              <span class="compare__tag compare__tag--after">После</span>
+              <div class="compare__handle" aria-hidden="true"><span class="compare__knob"></span></div>
+              <input class="compare__range" type="range" min="0" max="100" value="100" aria-label="Диван: до и после" />
+            </div>
+            <figcaption>Диван</figcaption>
+          </figure>
+          <figure class="compare">
+            <div class="compare__stage" data-compare>
+              <img class="compare__after" src="images/works/chair-after.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              <div class="compare__before">
+                <img src="images/works/chair-before.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              </div>
+              <span class="compare__tag compare__tag--before">До</span>
+              <span class="compare__tag compare__tag--after">После</span>
+              <div class="compare__handle" aria-hidden="true"><span class="compare__knob"></span></div>
+              <input class="compare__range" type="range" min="0" max="100" value="100" aria-label="Кресло: до и после" />
+            </div>
+            <figcaption>Кресло</figcaption>
+          </figure>
+          <figure class="compare">
+            <div class="compare__stage" data-compare>
+              <img class="compare__after" src="images/works/jacquard-after.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              <div class="compare__before">
+                <img src="images/works/jacquard-before.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              </div>
+              <span class="compare__tag compare__tag--before">До</span>
+              <span class="compare__tag compare__tag--after">После</span>
+              <div class="compare__handle" aria-hidden="true"><span class="compare__knob"></span></div>
+              <input class="compare__range" type="range" min="0" max="100" value="100" aria-label="Диван: до и после" />
+            </div>
+            <figcaption>Диван</figcaption>
+          </figure>
+          <figure class="compare">
+            <div class="compare__stage" data-compare>
+              <img class="compare__after" src="images/works/mattress-after.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              <div class="compare__before">
+                <img src="images/works/mattress-before.webp" alt="" width="900" height="900" loading="lazy" draggable="false" />
+              </div>
+              <span class="compare__tag compare__tag--before">До</span>
+              <span class="compare__tag compare__tag--after">После</span>
+              <div class="compare__handle" aria-hidden="true"><span class="compare__knob"></span></div>
+              <input class="compare__range" type="range" min="0" max="100" value="100" aria-label="Матрас: до и после" />
+            </div>
+            <figcaption>Матрас</figcaption>
+          </figure>
+        </div>
       </section>
     </main>
-    <script src="scripts/main.js" type="module"></script>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top">Limpio</a>
+      <a href="tel:+79000000000">+7 900 000-00-00</a>
+      <p>По записи</p>
+    </footer>
+    <script src="scripts/main.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,50 @@
+@layer components {
+  .hero {
+    position: relative;
+    display: grid;
+    align-items: end;
+    min-height: calc(100dvh - 3.25rem);
+    color: var(--color-foam);
+    overflow: hidden;
+  }
+
+  .hero__media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      to top,
+      oklch(0.2 0.03 165 / 0.9) 0%,
+      oklch(0.24 0.03 165 / 0.28) 58%
+    );
+  }
+
+  .hero__copy {
+    width: var(--container);
+    margin: 0 auto 4.5rem;
+  }
+
+  .hero .brand {
+    font-size: var(--step-1);
+  }
+
+  .hero h1 {
+    max-width: 12ch;
+    margin-top: 0.35rem;
+  }
+
+  .hero .btn {
+    margin-top: var(--space-4);
+  }
+}

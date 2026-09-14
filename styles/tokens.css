@@ -1,23 +1,34 @@
 @layer tokens {
   :root {
-    --color-bg: oklch(0.96 0.008 240);
-    --color-fg: oklch(0.24 0.02 250);
-    --color-muted: oklch(0.48 0.02 250);
-    --color-accent: oklch(0.4 0.07 165);
-    --color-wash: oklch(0.91 0.03 205);
+    --color-bg: oklch(0.96 0.012 130);
+    --color-fg: oklch(0.23 0.03 155);
+    --color-muted: oklch(0.45 0.02 150);
+    --color-accent: oklch(0.4 0.07 160);
+    --color-line: oklch(0.86 0.02 140);
+    --color-pine: oklch(0.26 0.032 165);
+    --color-foam: oklch(0.96 0.012 130);
 
     --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
     --font-body: "Source Sans 3", "Segoe UI", sans-serif;
 
-    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
-    --step-1: clamp(1.125rem, 1rem + 0.4vw, 1.25rem);
-    --step-5: clamp(2.75rem, 1.6rem + 5vw, 5.75rem);
+    --step--1: 0.9375rem;
+    --step-0: 1.0625rem;
+    --step-1: 1.25rem;
+    --step-2: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+    --step-3: clamp(2.75rem, 1.7rem + 3.2vw, 4.25rem);
 
+    --space-2: 0.5rem;
     --space-3: 1rem;
     --space-4: 1.5rem;
-    --space-6: 2.5rem;
+    --space-5: 2.5rem;
+    --space-6: 4rem;
 
+    --container: min(100% - 2rem, 68rem);
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-    --duration-mid: 420ms;
+    --duration-fast: 180ms;
+    --duration-mid: 700ms;
+
+    --z-nav: 20;
+    --z-skip: 90;
   }
 }
