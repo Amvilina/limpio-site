@@ -1,0 +1,24 @@
+@layer components {
+  .cta {
+    padding-block: 4.5rem;
+    background: var(--color-brand);
+    color: var(--color-foam);
+    text-align: center;
+  }
+
+  .cta h2,
+  .cta p {
+    width: var(--container);
+    margin-inline: auto;
+  }
+
+  .cta p {
+    margin-top: 0.45rem;
+    font-size: var(--step-1);
+    font-weight: 700;
+  }
+
+  .cta .btn {
+    margin-top: var(--space-4);
+  }
+}
