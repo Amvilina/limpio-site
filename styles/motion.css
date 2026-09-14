@@ -1,7 +1,7 @@
 @layer motion {
   @media (prefers-reduced-motion: no-preference) {
     .hero__media {
-      animation: zoom-out 10s var(--ease-out) both;
+      animation: hero-rise 900ms var(--ease-out) both;
     }
 
     .compare:not(.is-in) {
@@ -28,13 +28,15 @@
     }
   }
 
-  @keyframes zoom-out {
+  @keyframes hero-rise {
     from {
-      transform: scale(1.12);
+      opacity: 0;
+      transform: translateY(1.5rem);
     }
 
     to {
-      transform: scale(1);
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

@@ -1,38 +1,20 @@
 @layer components {
   .hero {
+    color: var(--color-brand);
+    background: oklch(0.96 0.012 90);
+  }
+
+  .hero__container {
     position: relative;
-    display: grid;
-    align-items: end;
-    min-height: calc(100dvh - 3.25rem);
-    color: var(--color-foam);
-    overflow: hidden;
-  }
-
-  .hero__media {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(
-      to top,
-      oklch(0.28 0.06 209 / 0.92) 0%,
-      oklch(0.32 0.05 209 / 0.28) 58%
-    );
+    width: var(--container);
+    margin-inline: auto;
+    padding-block: 8.25rem;
   }
 
   .hero__copy {
-    width: var(--container);
-    margin: 0 auto 4.5rem;
+    display: grid;
+    justify-items: start;
+    max-width: 22rem;
   }
 
   .hero .brand {
@@ -42,15 +24,89 @@
   .hero h1 {
     max-width: 14ch;
     margin-top: 0.35rem;
+    font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.75rem);
   }
 
-  .hero__place {
-    margin-top: 0.45rem;
-    font-size: var(--step-0);
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1rem;
+    padding: 0.55rem 1.15rem 0.55rem 0.85rem;
+    border-radius: 999px;
+    background: var(--color-brand);
+    color: var(--color-foam);
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .hero__badge svg {
+    flex: none;
+  }
+
+  .hero__person {
+    position: absolute;
+    z-index: 2;
+    top: 2.25rem;
+    right: 0;
+    max-width: 12rem;
+    text-align: right;
+    font-size: var(--step--1);
     font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .hero__person strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+
+  .hero__media {
+    position: absolute;
+    z-index: 1;
+    right: 5.5rem;
+    bottom: 0;
+    width: 26rem;
+    max-width: none;
+    height: auto;
   }
 
   .hero .btn {
     margin-top: var(--space-4);
+    border-color: var(--color-brand);
+    background: var(--color-brand);
+    color: var(--color-foam);
+  }
+
+  .hero .btn::before {
+    background: var(--color-foam);
+  }
+
+  .hero .btn:hover,
+  .hero .btn:focus-visible {
+    color: var(--color-brand);
+  }
+
+  @media (max-width: 48.99rem) {
+    .hero__copy {
+      max-width: 52%;
+    }
+
+    .hero__person {
+      top: 1.25rem;
+      max-width: 40%;
+    }
+
+    .hero__media {
+      right: 0;
+      width: 50%;
+    }
   }
 }
