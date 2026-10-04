@@ -23,6 +23,10 @@ document.querySelectorAll("[data-compare]").forEach((stage, index) => {
   if (!range || !before || !handle) return;
 
   let locked = false;
+  let pending = false;
+  let dragging = false;
+  let startX = 0;
+  let startY = 0;
 
   const paint = (value) => {
     const percent = Math.min(100, Math.max(0, Number(value)));
@@ -39,15 +43,39 @@ document.querySelectorAll("[data-compare]").forEach((stage, index) => {
   range.addEventListener("input", () => paint(range.value));
 
   stage.addEventListener("pointerdown", (event) => {
-    event.preventDefault();
+    pending = true;
+    dragging = false;
     locked = true;
-    stage.setPointerCapture(event.pointerId);
-    fromPointer(event);
+    startX = event.clientX;
+    startY = event.clientY;
   });
 
   stage.addEventListener("pointermove", (event) => {
-    if (!stage.hasPointerCapture(event.pointerId)) return;
-    fromPointer(event);
+    if (!pending && !dragging) return;
+
+    const dx = event.clientX - startX;
+    const dy = event.clientY - startY;
+
+    if (pending) {
+      if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+      pending = false;
+      if (Math.abs(dy) >= Math.abs(dx)) return;
+      dragging = true;
+      stage.setPointerCapture(event.pointerId);
+    }
+
+    if (dragging) fromPointer(event);
+  });
+
+  stage.addEventListener("pointerup", (event) => {
+    if (pending) fromPointer(event);
+    pending = false;
+    dragging = false;
+  });
+
+  stage.addEventListener("pointercancel", () => {
+    pending = false;
+    dragging = false;
   });
 
   paint(100);
